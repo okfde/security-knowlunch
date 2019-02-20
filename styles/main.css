@@ -39,3 +39,11 @@ ul li:before {
 ul li ul li:before {
   color: var(--secondary);
 }
+
+.subtopics {
+  color: lightgrey;
+}
+
+.subtopics li:before {
+  color: lightskyblue;
+}
