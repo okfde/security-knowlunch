@@ -1,10 +1,41 @@
 :root {
-  --brand: #e93c55;
-  --brand-bg: #ee6a7d;
-  --secondary: #ff00ff;
+  --brand: #082a8b;
+  --brand-rgba: #082a8b80;
+  --secondary: #ffec00;
 }
 
+body {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
 
-.slide-invert {
+p, li {
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 1.1rem;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1em;
+}
+
+ul li:before {
+  content: "▪";
+  position: absolute;
+  left: 0;
+  color: var(--brand);
+}
+
+ul li ul li:before {
+  color: var(--secondary);
 }
