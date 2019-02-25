@@ -2,6 +2,7 @@
   --brand: #082a8b;
   --brand-rgba: #082a8b80;
   --secondary: #ffec00;
+  --black: #000;
 }
 
 body {
@@ -46,4 +47,30 @@ ul li ul li:before {
 
 .subtopics li:before {
   color: lightskyblue;
+}
+
+.title h1 {
+  font-size: 4.4rem;
+}
+
+.censored {
+  padding: 0 .3em;
+  color: var(--black);
+  background-color: var(--black);
+}
+.censored:hover,
+.censored:active {
+  color: white;
+}
+
+.img-s img {
+  max-width: 10rem;
+}
+
+.mt {
+  margin-top: 5em;
+}
+
+.small p {
+  font-size: 0.9rem;
 }
