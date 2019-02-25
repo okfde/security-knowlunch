@@ -92,33 +92,104 @@
 
     # Verschlüsselung
 
-    ## Symmetrisch
+    --
+
+    ### Symmetrisch
 
     --
 
-    ## Asymmetrisch
+    - 1 Schlüssel zum ver- und entschlüsseln
+
+    --
+
+    - z.B. [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher), [Enigma machine](https://en.wikipedia.org/wiki/Enigma_machine)
+
+    --
+
+    - Festplattenverschlüsselung, Passwortmanager
+
+    --
+
+    - einfach zu benutzen für eine Person
+
+    --
+
+    - problematisch/ anfällig bei mehreren Personen (die sich nicht kennen)
+
+    ---
+
+    # Verschlüsselung
+
+    ### Asymmetrisch
+
+    --
+
+    - Schlüsselpaar
+
+      - öffentlicher Schlüssel (public key) zum Verschlüsseln
+      - privater Schlüssel (private key) zum Entschlüsseln
+
+    --
+
+    - OpenPGP (Pretty Good Privacy) ist der Standard, GPG (Gnu Privary Guard) eine Implementierung
+
+    --
+
+    - Email-Verschlüsselung, HTTPS, OTR, OMEMO, Axolotl etc
+
+    --
+
+    - Parteien müssen sich nicht kennen um zu verschüsseln, solange die öffentlichen Schlüssel bekannt sind
+
+    ---
+
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/32/Public-key-crypto-1.svg)
+
+    Alice erstellt ein Schüsselpaar
+
+    ---
+
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg)
+    Bob verschlüsselt eine Nachricht an Alice
+
+    ---
+
+    class: bg-contain
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Private_key_signing.png)
+
+    Alice signiert eine Nachricht an Bob
 
     ---
 
     background-image: url(https://imgs.xkcd.com/comics/security.png)
-    https://www.xkcd.com/538/
+
+    .small[https://www.xkcd.com/538/]
 
     ---
+
+    class: middle
 
     # Security Disclaimer
 
-    Wichtig ist: es gibt keine 100% Sicherheit, weder digital noch in der physischen Welt.
+    --
+
+    Es gibt keine 100%e Sicherheit,
+
+    weder digital noch in der physischen Welt.
 
     --
 
-    **Aber** wir können die angreifbaren Flächen verkleinern bis der Aufwand des Angriffs den Nutzen übersteigt
+    **Aber** wir können Hürden aufstellen
+
+    bis der Aufwand des Angriffs den Nutzen übersteigt.
 
     ---
 
+    class: middle
     # Digitale Selbstverteidigung
 
     --
-    ## Choose your weapons
+    **Choose your weapons**
 
     --
     - open-source Software
@@ -127,33 +198,107 @@
     - dezentrale Infrastruktur
 
     --
-    - Ende-zu-Ende verschlüsselt
+    - (Ende-zu-Ende) verschlüsselt
 
     ---
 
     # Passwörter
 
-    ---
+    --
 
-    background-image: url(https://imgs.xkcd.com/comics/password_strength.png)
-
-    https://www.xkcd.com/936/
-
-    ---
-
-    # Passwörter
+    - Letzte Verteidigungslinie zwischen dir/ deinen Daten/ deiner Privatsphäre und der Welt
 
     --
 
     ## Was ist ein gutes Passwort?
 
+    ---
+
+    background-image: url(https://imgs.xkcd.com/comics/password_strength.png)
+
+    .small[https://www.xkcd.com/936/]
+
+    ---
+
+    # Passwörter
+
+    - Letzte Verteidigungslinie zwischen dir/ deinen Daten/ deiner Privatsphäre und der Welt
+
+    ## Was ist ein gutes Passwort?
+
     --
+
+    - mindestens 12 Zeichen, alphanumerischer Zeichensatz mit Sonderzeichen für mehr Entropie
+
+    --
+    - oder als Passsatz: vier oder mehr nicht zusammenhängende Wörter
+
+
+    --
+
+    - wird nur **einmal (!!!)** verwendet .small[([Workshop zum Thema](https://lislis.de/workshops/mixed-feminist-action/#14))]
+
+    ---
+
+    # Passwörter
 
     ## Passwortmanager
 
     --
 
+    - Die Antwort auf die Frage: Wie soll ich mir die ganzen Passwörter merken?
+
+    --
+
+    - z.B. [KeePassXC](https://keepassxc.org/screenshots/) https://keepassxc.org/
+
+      - open-source, cross-platform
+      - mit Passsatz verschlüsselter Container in dem die Passwörter gespeichert werden
+      - Container kann mit verschiedenen KeePass kompatiplen Clients geöffnet werden (z.B. auf mobilen Geräten [KeePass DX](https://www.keepassdx.com/), [MiniKeePass](https://itunes.apple.com/us/app/minikeepass-secure-password/id451661808))
+      - bleibt lokal auf dem Gerät
+
+    ---
+
+    # Passwörter
+
+    ## Passwortmanager
+
+    - und was ist mit Cloudanbietern?
+
+    --
+
+    - lösen das Problem der geteilten Datenbank
+
+    --
+
+    - aber: Vertrauen in Anbieter muss vorhanden sein ([LastPass Leak 2017](https://www.theregister.co.uk/2017/03/21/lastpass_vulnerabilities/))
+
+    --
+
+    - [Passbold](https://www.passbolt.com/) als Alternative?
+
+    ---
+
+    # Passwörter
     ## Two Factor Authentication
+
+    --
+
+    - "Etwas, das du weißt und etwas, das du hast." -> Passwort und 2. Faktor
+
+    --
+
+    - Hauptsächlich über Smartphones gelöst
+
+      - SMS oder automatisierte Anrufe
+
+    --
+
+      - HOTP / TOTP über Apps (z.B. [andOTP](https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp&hl=en_US) (Android), [FreeOTP](https://itunes.apple.com/us/app/freeotp-authenticator/id872559395) (iOS), [SailOTP](https://github.com/seiichiro0185/sailotp) (SailfishOS))
+
+    --
+
+      - U2F (Universal 2nd Factor) Hardwarelösungen (z.B. [YubiKey](https://www.yubico.com/), [NitroKey](https://www.nitrokey.com/))
 
     ---
 
@@ -185,6 +330,17 @@
     ## Danke für eure Aufmerksamkeit
 
     und guten Appetit
+
+    ---
+
+    ## Linkliste
+
+    - https://dzone.com/articles/keep-your-privacy-and-start-encrypting-your-emails
+    - https://hackblossom.org/cybersecurity/
+    - https://freedom.press/training/
+    - https://ssd.eff.org/
+    - https://securityinabox.org/en/
+
 
     </textarea>
     <script src="scripts/remark.min.js"></script>

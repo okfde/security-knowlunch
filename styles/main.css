@@ -74,3 +74,7 @@ ul li ul li:before {
 .small p {
   font-size: 0.9rem;
 }
+
+.bg-contain {
+  background-size: contain !important;
+}
