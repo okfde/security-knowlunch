@@ -35,7 +35,7 @@
 
     .subtopics[
     - Festplatten-Verschlüsselung
-    - Massenger-Verschlüsselung
+    - Messenger-Verschlüsselung
     - WLAN-Sicherheit
     - Browsing-Sicherheit
     - TOR]
@@ -91,8 +91,21 @@
     ---
 
     # Verschlüsselung
+    --
+
+    - Umwandlung Inhalten von Klartext in Ciphertext
 
     --
+
+    - nur berechtigte Personen können Ciphertext leserbar machen
+
+    --
+
+    - Verschlüsselung dient der Privatsphäre, sie garantiert keine Anonymsierung! (#metadata)
+
+    ---
+
+    # Verschlüsselung
 
     ### Symmetrisch
 
@@ -154,6 +167,22 @@
 
     ---
 
+    ## Schwachstellen im System
+
+    --
+
+    - Man-in-the-Middle-Angriffe
+
+      - jede*r kann mit deinem Public Key an dich verschlüsseln
+
+      - Email kann abgefangen, inhaltlich verändert, und wieder verschlüsselt an dich gesendet werden
+
+    --
+
+    -> Email signieren
+
+    ---
+
     class: bg-contain
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Private_key_signing.png)
 
@@ -161,9 +190,57 @@
 
     ---
 
-    background-image: url(https://imgs.xkcd.com/comics/security.png)
+    ## Was ist eine Signatur?
 
-    .small[https://www.xkcd.com/538/]
+    - Der gehashte Inhalt der Email
+
+    - mit dem privaten Key des Senders verschlüsselt
+
+    --
+
+    - Signatur des Senders kann mit dessen öffentlichen Schlüssel entschlüsselt werden
+
+    - Computer erstellt ebenfalls einen Hash des Inhalts und vergleicht die Hashes miteinander
+
+    - stimmen die Hashes überein wurde der Inhalt, seit er erstellt und versendet wurde, nicht verändert
+
+    ---
+
+    ## Schwachstellen im System
+
+    --
+
+    - Jede*r kann sich ein Keypair zu einer x-beliebigen Email generieren
+
+      - Angreifer erhält Zugang zu Postfach einer bekannten Person, oder erhält möglichkeit Emails an das Postfach abzufangen
+
+      - schreibt von dort aus verschlüsselt Emails mit eigenem Key an dich
+
+      - Signaturen sind in diesem Fall korrekt
+
+    --
+
+    -> Key signing, Web of Trust
+
+    ---
+
+    ## Key signing?? Web of What?
+
+    - öffentliche Schlüssel können, wie Emails, signiert werden
+
+    --
+
+    - "Ich bestätige mit meinem eigenen Schlüssel die Identität der Person mit diesem Key."
+
+    --
+
+    - Signaturen auf öffentlichen Schlüsseln ergeben ein Netzwerk (-graphen), dem sog. Web of Trust
+
+    ---
+
+    background-image: url(https://imgs.xkcd.com/comics/responsible_behavior.png)
+
+    .small[https://www.xkcd.com/364/]
 
     ---
 
@@ -182,6 +259,12 @@
     **Aber** wir können Hürden aufstellen
 
     bis der Aufwand des Angriffs den Nutzen übersteigt.
+
+    ---
+
+    background-image: url(https://imgs.xkcd.com/comics/security.png)
+
+    .small[https://www.xkcd.com/538/]
 
     ---
 
