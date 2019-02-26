@@ -78,3 +78,7 @@ ul li ul li:before {
 .bg-contain {
   background-size: contain !important;
 }
+
+.remark-code {
+  font-size: 10px;
+}

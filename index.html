@@ -306,13 +306,115 @@
 
     --
 
+    - *"Ne Email ist ne Postkarte!" <small><small>Konfuzius</small></small>*
+    
+    ```http
+    Delivered-To: bob@bob.org
+    Received: by 2002:a02:9d3:0:0:0:0:0 with SMTP id 80csp5917977jam;
+            Tue, 26 Feb 2019 05:37:44 -0800 (PST)
+    X-Received: by 2002:ff:ff:ff:: with SMTP id n23mr19009329edy.233.1551188263959;
+            Tue, 26 Feb 2019 05:37:43 -0800 (PST)
+    Return-Path: <alice@alice.org>
+    Received: from mx.gemeiner-host.fies (wirklich.fies. [1.2.3.5])
+            by mx.google.com with ESMTPS id l52si3186687edb.0.2019.02.26.05.37.43
+            for <bob@bob.org>
+            (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+            Tue, 26 Feb 2019 05:37:43 -0800 (PST)
+    Received: from mx.alice.org (mx.alice.org. [1.2.3.4])
+            by mx.gemeiner-host.fies with ESMTPS id l52si3186687edb.0.2019.02.26.05.37.43
+            for <bob@bob.org>
+            (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+            Tue, 26 Feb 2019 05:37:43 -0800 (PST)
+    To: bob@bob.org
+    From: Alice <alice@alice.org>
+    Subject: knowlunch heute
+    Message-ID: <7ba1fc15-00af-b8b0-8aed-73a7a8f3b2fd@alice.org>
+    Date: Tue, 26 Feb 2019 14:37:11 +0100
+    MIME-Version: 1.0
+    Content-Type: text/plain; charset=utf-8
+    Content-Transfer-Encoding: 8bit
+    Content-Language: en-US
+    
+    Hallo Bob,
+    
+    bist Du auch gleich beim knowlunch?
+    
+    DrÃ¼cker,
+    Alice
+
+    ```
+
+    ---
+    ## Emails verschlüsseln
+
     - *"Ne Email ist ne Postkarte!"*
 
-    --
+    ```http
+    [...header siehe oben...]
+    MIME-Version: 1.0
+    Subject: =?UTF-8?Q?Verschl=c3=bcsselte_Nachricht?=
+    Content-Type: multipart/encrypted;
+     protocol="application/pgp-encrypted";
+     boundary="GyhO5C4VpXQHVCzh5trtOFj9HZOtCY2Lr"
+    
+    This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+    --GyhO5C4VpXQHVCzh5trtOFj9HZOtCY2Lr
+    Content-Type: application/pgp-encrypted
+    Content-Description: PGP/MIME version identification
+    
+    Version: 1
+    
+    --GyhO5C4VpXQHVCzh5trtOFj9HZOtCY2Lr
+    Content-Type: application/octet-stream; name="encrypted.asc"
+    Content-Description: OpenPGP encrypted message
+    Content-Disposition: inline; filename="encrypted.asc"
+    
+    -----BEGIN PGP MESSAGE-----
+    
+    hQIMA/ygge+njNuFAQ/+OIPcFWKBedQZ1tRKzJTYRU9fsjbFgxkg0NF0tBTrQWNe
+    XyVUbxK5xH9C5BrrmTmJeppcp4RT1x4jGY5yr/tyTKrQpzIp6MybfMot+CihBPqJ
+    GT/uoE7UH4A/RR7VWI5BZQZ57I1grME4YipbqulbuSe+8o2QZdAnwZXPV4Skxl4S
+    iM1RYLvmZS5XUQRRe+MI6GYaAIu+1wuhrwdGZGYtOHy8YSveFUjDyh/jefG1gXyx
+    +hWD3yDedzVez1Q8Z2WVgme77Kox34ONjUWiuFjyjriSQaJrARJFGOIQuJjFgg41
+    b8W5Nz124dV4UD5JfVTiC1sNAT4wy8ZIWWmel0R+x1YVFQ2ausJobGvugw41QSUb
+    TB7CelUEdsRS41L983jWf2YmbVJ45z9miOO4s7qCMGhxW4NwcF1hzRgMHSryYQdD
+    Q1vkMf9DThMIZM4xj0R0rjkH8Yj+Z8H4q9COuIeRGXM4YiAXLW2MyiyXdKVc6Qhn
+    15owOSv6juz6Kr0DKJ/s/hs8UG1mx/jOXP4NQvoO6/WLeOjLcPhXPW9/iQK+7ysH
+    [...]
+    PHFlFpiIwVtH9TJYMmGWT8SaMqoXYe9i84zC2iZR/cktfplrrPexnZli7hzIbiUD
+    TJnQds+eraTFhzvxrLp4mePsZ1GmRLW8R4SpL4xSx+ESpLBlY+iAFj1wrCCxSScw
+    NcgILUF0csD91HFTd+uEBz2Y
+    =h4Uu
+    -----END PGP MESSAGE-----
+
+    --GyhO5C4VpXQHVCzh5trtOFj9HZOtCY2Lr--
+    ```
+
+    ---
+
+    ## Emails verschlüsseln
+
+    - *"Ne Email ist ne Postkarte!"*
+
 
     - sichere Email fängt beim Hoster an
 
-    --
+    ---    
+
+
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/93/E-Mail-Prinzip-v05.png)
+    Weg einer Email
+    
+
+    ---
+
+    ## Emails verschlüsseln
+
+    - *"Ne Email ist ne Postkarte!"*
+
+
+    - sichere Email fängt beim Hoster an
+
 
     - was wird verschlüsselt?
     --
